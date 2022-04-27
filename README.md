@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here is my first training exercise to learn using Spring Boot, Docker, MySQL, Postman.
+Timetracker Spring Boot application is my first training exercise to learn using Spring Boot, Docker, MySQL, Postman.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
