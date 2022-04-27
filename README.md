@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <!-- div align="center">
-  <!-- a href="https://github.com/github_username/repo_name">
+  <!-- a href="https://github.com/gondoni/timetracker">
     <!-- img src="images/logo.png" alt="Logo" width="80" height="80">
   <!-- /a>
 
@@ -42,10 +42,8 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -97,7 +95,7 @@ You need the followings:
 
 ## Usage
 
-1. Run the Timetracker Spring Boot App. Tomcat webserver starts on localhost on port 8080
+1. Run the Timetracker Spring Boot App. Tomcat webserver starts at localhost:8080
 2. Browse this web address:
    ```sh
    http://localhost:8080/
@@ -106,9 +104,9 @@ At first, it redirects you to the login site: [http://localhost:8080/login](http
 You can login with usernames and passwords of the user table stored in the MySQL database. Example usernames: 'nferi', 'kvili', 'totto', with the same password: 'pwd'.
 
 3. After login, visit these websites for the specified GET requests:
-* [http://localhost:8080/projects](http://localhost:8080/projects) - it gives JSON objects with projects of your user
-* [http://localhost:8080/tasks](http://localhost:8080/tasks) - it gives JSON objects with tasks of your user
-* [http://localhost:8080/fulfillments](http://localhost:8080/fulfillments) - it gives JSON objects with fulfillments of your user
+* [http://localhost:8080/projects](http://localhost:8080/projects) - it gives JSON objects with projects of the signed in user
+* [http://localhost:8080/tasks](http://localhost:8080/tasks) - it gives JSON objects with tasks of the signed in user
+* [http://localhost:8080/fulfillments](http://localhost:8080/fulfillments) - it gives JSON objects with fulfillments of the signed in user
 
 4. Testing POST requests you need to use, for example [Postman](https://www.postman.com/)
 * To login send a POST request, with body containing username and password as form-data keys and values:
@@ -116,88 +114,41 @@ You can login with usernames and passwords of the user table stored in the MySQL
     <img src="images/postman_login.png" alt="Login">
     
 * To insert/edit fulfillments send a POST request, with body containing details as JSON raw data:
+* 
     <img src="images/postman_fulfillment_insert.png" alt="Fulfillment insert">
-
+  
+  Copy this JSON object example:
+   ```sh
+   {
+    "description": "post_proba",
+    "fulfillDate": "2022-04-27T00:00:00+00:00",
+    "hours": 1.11,
+    "usertask": {
+		  "id": 2
+		  }
+   }
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gondoni/timetracker/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the Moon42 License. See `LICENSE.txt` for more information.
+Distributed under the [Moon42 Ltd.](https://www.moon42.com/) License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
 
 István Gondon - istvan.gondon@moon42.com
-
 Project Link: [https://github.com/gondoni/timetracker](https://github.com/gondoni/timetracker)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
