@@ -106,14 +106,14 @@ At first, it redirects you to the login site: [http://localhost:8080/login](http
 You can login with usernames and passwords of the user table stored in the MySQL database. Example usernames: 'nferi', 'kvili', 'totto', with the same password: 'pwd'.
 
 3. After login, visit these websites for the specified GET requests:
-* [http://localhost:8080/projects](http://localhost:8080/projects) - it gives you JSON objects with projects of your user
-* [http://localhost:8080/tasks](http://localhost:8080/tasks) - it gives you JSON objects with tasks of your user
-* [http://localhost:8080/fulfillments](http://localhost:8080/fulfillments) - it gives you JSON objects with fulfillments of your user
+* [http://localhost:8080/projects](http://localhost:8080/projects) - it gives JSON objects with projects of your user
+* [http://localhost:8080/tasks](http://localhost:8080/tasks) - it gives JSON objects with tasks of your user
+* [http://localhost:8080/fulfillments](http://localhost:8080/fulfillments) - it gives JSON objects with fulfillments of your user
 
 4. Testing POST requests you need to use, for example [Postman](https://www.postman.com/)
 * To login send a POST request, its body contains username and password as form-data keys and values:
 
-    <img src="images/posman_login.png" alt="Login">
+    <img src="images/postman_login.png" alt="Login">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
